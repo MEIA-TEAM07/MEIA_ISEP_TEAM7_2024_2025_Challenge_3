@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.metrics import accuracy_score
 from concurrent.futures import ThreadPoolExecutor
 import cv2
-import TurboJPEG
+from turbojpeg import TurboJPEG
 
 # Etapa 1: Carregamento do TurboJPEG ou OpenCV
 with tqdm(total=1, desc="Carregando TurboJPEG/OpenCV", bar_format="{l_bar}{bar} [{elapsed}]") as pbar:
@@ -26,8 +26,8 @@ with tqdm(total=1, desc="Carregando TurboJPEG/OpenCV", bar_format="{l_bar}{bar} 
     pbar.update(1)
 
 # Carregar CSV
-df = pd.read_csv('train/_annotations.csv')
-image_folder = "train/"
+df = pd.read_csv('merged/_annotationsMerged.csv')
+image_folder = "merged/"
 X, y = [], []
 
 def extract_color_histogram_features(image):
