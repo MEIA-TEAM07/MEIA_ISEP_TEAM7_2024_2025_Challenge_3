@@ -1,0 +1,18 @@
+# IDEA
+.idea
+*.ipr
+*.iml
+*.iws
+
+# Misc
+.DS_Store
+
+# Local environment
+.env
+
+# Virtualization
+.venv
+.conda
+
+# fastAPI
+__pycache__/
